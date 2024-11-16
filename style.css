@@ -1,2 +1,24 @@
-*{  margin: 0; padding: 0; box-sizing: border-box; }
+*{  margin: 0; padding: 0; box-sizing: border-box; font-family: montserrat; color: 	#28282B; }
 
+body{ background: #d2d2d2; width: 100%; }
+
+.banner{ width: 100%; max-width: 1440px; margin: auto; height: 100vh; text-align: center;  overflow: hidden; background: url(assets/bg.png) no-repeat; background-size: contain; background-position: 0 50px; position: relative; }
+
+.banner .slider{ position: absolute; width: 150px; height: 200px;   top: 15%;   left: calc(50% - 80px); transform-style: preserve-3d ; transform: perspective(1000px);  animation: autoRun 80s linear infinite; z-index: 2;}
+
+@keyframes autoRun{
+    from{ transform: perspective(1000px) rotateX(-15deg) rotateY(0deg)}
+    to{ transform: perspective(1000px) rotateX(-15deg) rotateY(360deg)}
+}
+
+.banner .slider .item{ position: absolute; inset: 0 0 0 0; transform: rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(500px); }
+
+.banner .slider .item img{ width: 100%; height: 100%; object-fit: cover; }
+
+.banner .content{ position: absolute; bottom: 0px; left: 50%; transform: translateX(-50%); width: 100%; height: max-content; } 
+
+.banner .model{ background: url(assets/model.png) top center no-repeat; width: 100%; height: 72vh; position: absolute; bottom: 0; left: 0; background-size: auto 130%; z-index: 0; }
+
+.banner .title{ position: absolute; font-size: 4.37rem; bottom: 25px; width: 100%; text-transform: uppercase; }
+
+.banner .title h1::after{   content:"dragon warrior"; position: absolute; inset: 0 0 0 0; width: 100%; color: transparent; -webkit-text-stroke: 2px white; z-index: 3; }
