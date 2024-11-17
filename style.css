@@ -1,10 +1,10 @@
 *{  margin: 0; padding: 0; box-sizing: border-box; font-family: montserrat; color: 	#28282B; }
 
-body{ background: #d2d2d2; width: 100%; }
+body{ background-color: #D2D2D2; background-image: repeating-linear-gradient( to right, transparent 0 100px,#25283b22 100px 101px), repeating-linear-gradient( to bottom, transparent 0 100px, #25283b22 100px 101px); }
 
-.banner{ width: 100%; max-width: 1440px; margin: auto; height: 100vh; text-align: center;  overflow: hidden; background: url(assets/bg.png) no-repeat; background-size: contain; background-position: 0 50px; position: relative; }
+.banner{ width: 100%; max-width: 1440px; margin: auto; height: 100vh; text-align: center;  overflow: hidden; background: url(assets/bg.png) no-repeat; background-size: contain; background-position: 0 100px; position: relative; }
 
-.banner .slider{ position: absolute; width: 150px; height: 200px;   top: 15%;   left: calc(50% - 80px); transform-style: preserve-3d ; transform: perspective(1000px);  animation: autoRun 80s linear infinite; z-index: 2;}
+.banner .slider{ position: absolute; width: 150px; height: 200px;   top: 12.5%;   left: calc(50% - 80px); transform-style: preserve-3d ; transform: perspective(1000px);  animation: autoRun 80s linear infinite; z-index: 2;}
 
 @keyframes autoRun{
     from{ transform: perspective(1000px) rotateX(-15deg) rotateY(0deg)}
